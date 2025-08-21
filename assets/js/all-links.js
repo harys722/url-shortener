@@ -25,10 +25,10 @@ async function loadAndDisplayLinks() {
           const gridEl = document.getElementById("links-grid");
           const countEl = document.getElementById("link-count");
           const currentDomain =
-            window.location.origin +
-            window.location.pathname
-              .replace("dashboard.html", "")
-              .replace(/\/$/, "");
+                  window.location.origin +
+                  window.location.pathname
+                  .replace(/\/?(dashboard\.html|dashboard)$/, "")
+                  .replace(/\/$/, "");
 
           const linkEntries = Object.entries(links);
           countEl.textContent = linkEntries.length;
