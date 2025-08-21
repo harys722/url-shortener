@@ -9,3 +9,19 @@
 
 # URL Shortener
 This is a simple short URL generator that uses only one page to handle all short URLs called 404 page. Yes, 404 page can handle all short links and create short URLs. This is a nerd technique that is very useful trick.
+
+## How it works
+1. Fork and star this repository.
+2. Enable **GitHub Pages** or choose any other hosting service, such as Netlify or Vercel.
+3. Edit your links.json file:
+   ```json
+   {
+    "example": "https://example.com/",
+    "google": "https://google.com/"
+    "github": "https://github.com/"
+   }
+   ```
+4. 404 page handles all the short links.
+5. Share your short links: `https://yourdomain.com/example`
+6. Users get redirected instantly to the target URL!
+
