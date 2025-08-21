@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Short URLs - URL Shortener</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">⚡</div>
+      <h1 class="title">All Short URLs</h1>
+      <p class="subtitle">
+        Complete list of available short URLs and their destinations
+      </p>
+
+      <div class="back-home">
+        <a href="/" class="back-btn">← Back to Home</a>
+      </div>
+
+      <div id="loading" class="loading">
+        <div class="loading-icon">⚡</div>
+        <h3 style="color: #1e3c72; margin-bottom: 10px">Loading Links...</h3>
+        <p>Fetching all available short URLs from the database</p>
+      </div>
+
+      <div id="error" class="error" style="display: none">
+        <h3>❌ Error Loading Links</h3>
+        <p>
+          Unable to load the links database. Make sure
+          <code>links.json</code> exists in your repository root.
+        </p>
+      </div>
+
+      <div id="links-container" style="display: none">
+        <div id="stats" class="stats">
+          <h3>Total Active Links</h3>
+          <div class="count" id="link-count">0</div>
+        </div>
+
+        <div class="links-grid" id="links-grid"></div>
+      </div>
+      <footer>
+        <p>
+          <b>&copy; 2025 URL Shortener App</b>. Made with ❤︎ by
+          <a href="https://github.com/harys722/" target="_blank">harys722</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="./assets/js/all-links.js"></script>
+  </body>
+</html>
