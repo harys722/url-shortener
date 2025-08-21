@@ -27,7 +27,7 @@ async function loadAndDisplayLinks() {
           const currentDomain =
             window.location.origin +
             window.location.pathname
-              .replace("all-links.html", "")
+              .replace("dashboard.html", "")
               .replace(/\/$/, "");
 
           const linkEntries = Object.entries(links);
