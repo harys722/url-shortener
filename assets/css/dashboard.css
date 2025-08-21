@@ -1,4 +1,4 @@
-\html,
+html,
 body {
   margin: 0;
   padding: 0;
@@ -281,6 +281,18 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+footer a {
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #1e3c72;
+  text-decoration: underline;
 }
 
 /* Comprehensive responsive design */
