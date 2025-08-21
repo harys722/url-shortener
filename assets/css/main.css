@@ -1,0 +1,328 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #2d3748;
+  padding: 20px 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  padding: 60px 40px;
+  background: #add8e6;
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 80px;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #4a5568;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #1e3c72;
+  text-decoration: underline;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.feature {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(30, 60, 114, 0.15);
+  border-color: #2a5298;
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.feature-desc {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.how-it-works {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 45px 40px;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  margin: 60px 0;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.how-it-works h3 {
+  color: #1a202c;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 24px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.step-number {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
+}
+
+.step-text {
+  color: #2d3748;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.step-text code {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.code-example {
+  background: #1a202c;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  margin: 15px 0;
+  border: 1px solid #2d3748;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  margin-top: 50px;
+  padding: 30px;
+  color: #4a5568;
+  font-size: 15px;
+  border-top: 2px solid #e2e8f0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Comprehensive responsive design */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 50px 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+    padding: 45px 30px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .logo {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 40px 25px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .logo {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 50px 0;
+  }
+
+  .feature {
+    padding: 35px 25px;
+  }
+
+  .how-it-works {
+    padding: 35px 25px;
+    margin: 50px 0;
+  }
+
+  .how-it-works h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 98%;
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .logo {
+    font-size: 50px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .features {
+    gap: 20px;
+  }
+
+  .feature {
+    padding: 30px 20px;
+  }
+
+  .feature-icon {
+    font-size: 40px;
+  }
+
+  .feature-title {
+    font-size: 18px;
+  }
+
+  .how-it-works {
+    padding: 25px 20px;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .step-text {
+    text-align: left;
+  }
+}
