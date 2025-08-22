@@ -42,7 +42,7 @@ async function loadAndDisplayLinks() {
             card.innerHTML = `
               <div class="short-url">${shortUrl}</div>
               <div class="target-url">→ ${targetUrl}</div>
-              <a href="/${shortUrl}" class="visit-btn">Visit URL</a>
+              <a href="${shortUrl}" class="visit-btn">Visit URL</a>
               <a href="${targetUrl}" class="visit-btn">Direct Link</a>
             `;
 
